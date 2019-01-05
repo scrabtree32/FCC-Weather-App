@@ -12,7 +12,7 @@ $( document ).ready(function(){
     getWeather(lat, lon);
     });
   } else {console.log("error")};
-});
+
 
 
 //get weather from FCC api
@@ -87,3 +87,5 @@ $( document ).ready(function(){
     };
  
 getWeather();
+    
+});
