@@ -5,11 +5,13 @@ var lat, lon,
 
 //get location 
 $( document ).ready(function(){
+ if(navigator.geolocation){
   navigator.geolocation.getCurrentPosition(function(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     getWeather(lat, lon);
     });
+  } else {console.log("Geolocation is not supported by this browser.")};
 
 
 
